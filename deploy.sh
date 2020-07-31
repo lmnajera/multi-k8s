@@ -11,6 +11,6 @@ docker push lnajera/multi-server:$SHA
 docker push lnajera/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/server-deployment server=lnajera/multi-server:$SHA
 kubectl set image deployments/client-deployment client=lnajera/multi-client:$SHA
+kubectl set image deployments/server-deployment server=lnajera/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=lnajera/multi-worker:$SHA
